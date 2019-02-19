@@ -1,1 +1,7 @@
 springBoot项目中加入极验模块
+1.GeetestConfig类中需要配置自己的captcha_id和private_key（极验官网中注册后获得  地址：http://www.geetest.com/Sensebot）
+2.GeetestLib这是geetest公司提供的sdk文件，不用我们修改，直接使用就好了
+3.PublicController中是第一次请求时候需要的数据（需要自己去session中获取用户的用户名信息，并且也设置到session中）
+4.Verification这是第二次验证时调用的方法（在LoginController中有使用demo，修改为自己的业务逻辑就行了）
+5.启动app.class之后直接访问localhost:8080/login.html就可以使用了
+6.resource文件下面的static文件中是登陆页面和使用到的js文件
